@@ -11,8 +11,12 @@
   },
   "dependencies": {
     "@multiplayer-app/session-recorder-browser": "^1.2.10",
+    "better-sqlite3": "^12.4.1",
     "nuxt": "^4.2.0",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13"
   }
 }
