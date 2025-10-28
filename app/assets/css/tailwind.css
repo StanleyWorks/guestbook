@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Tailwind v4 CSS-first theme configuration */
+@theme {
+  --color-bg: #ffffff;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+
+  --color-primary: #2563eb;
+  --color-primary-foreground: #ffffff;
+
+  --radius-card: 0.75rem;
+  --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+@layer base {
+  html,
+  body,
+  #__nuxt {
+    height: 100%;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

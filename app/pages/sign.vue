@@ -22,25 +22,62 @@ const signBook = async () => {
 
 <template>
   <div>
-    <div>
-      <NuxtLink to="/">See messages</NuxtLink>
-    </div>
-    <div v-if="showSuccessAlert">Your message has been recorded.</div>
-    <form action="#" @submit.prevent="signBook">
-      <div>
-        <label for="name">Your name</label>
-        <input type="text" autocomplete="name" v-model="name" />
+    <section class="mx-auto max-w-7xl px-4 py-10">
+      <div class="mb-6 flex items-center justify-between">
+        <h1 class="text-xl font-semibold tracking-tight">Sign the book</h1>
+        <NuxtLink to="/" class="text-muted hover:text-text"
+          >See messages</NuxtLink
+        >
       </div>
 
-      <div>
-        <label for="message">Leave a message</label>
-        <textarea name="message" id="message" v-model="message"></textarea>
+      <div
+        v-if="showSuccessAlert"
+        class="mb-4 rounded-md border border-border bg-white p-3 text-sm text-green-700"
+      >
+        Your message has been recorded.
       </div>
 
-      <div>
-        <button type="submit">Sign book</button>
-      </div>
-    </form>
+      <form action="#" @submit.prevent="signBook" class="space-y-4">
+        <div>
+          <label for="name" class="mb-1 block text-sm font-medium text-text/90"
+            >Your name</label
+          >
+          <input
+            id="name"
+            type="text"
+            autocomplete="name"
+            v-model="name"
+            class="block w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-text shadow-sm placeholder:text-muted focus:border-transparent focus:ring-2 focus:ring-primary outline-none"
+            required
+          />
+        </div>
+
+        <div>
+          <label
+            for="message"
+            class="mb-1 block text-sm font-medium text-text/90"
+            >Leave a message</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            v-model="message"
+            rows="4"
+            class="block w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-text shadow-sm placeholder:text-muted focus:border-transparent focus:ring-2 focus:ring-primary outline-none"
+            required
+          ></textarea>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-colors bg-primary text-primary-foreground hover:bg-primary/90"
+          >
+            Sign book
+          </button>
+        </div>
+      </form>
+    </section>
   </div>
 </template>
 
