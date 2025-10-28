@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
+    multiplayerBackendKey: "",
     public: {
       multiplayerBrowserKey: "",
     },
