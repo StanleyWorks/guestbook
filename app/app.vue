@@ -8,6 +8,9 @@
       >
         <NuxtLink to="/" class="font-semibold text-text">Guestbook</NuxtLink>
         <nav class="flex items-center gap-3 text-sm">
+          <NuxtLink to="/fail" class="text-muted hover:text-text"
+            >Error page</NuxtLink
+          >
           <NuxtLink to="/" class="text-muted hover:text-text"
             >Messages</NuxtLink
           >
